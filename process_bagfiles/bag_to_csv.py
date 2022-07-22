@@ -20,10 +20,10 @@ print(args.file)
 bridge = CvBridge()
 
 startIdx = 0
-endIdx = 750
+endIdx = 800
 
-initPoint = np.array([29.578, 52.748, 4])
-# initPoint = np.array([0, 0, 0])
+# initPoint = np.array([29.578, 52.748, 4])
+initPoint = np.array([0, 0, 0])
 
 def getFileName(path):
     k = len(path)-1
@@ -51,26 +51,27 @@ bagName = getFileName(bagFile)
 imgDir = bagName+"images/"
 img_cnt = 0
 Path(imgDir).mkdir(parents=True, exist_ok=True)
-# for topic, msg, t in bag.read_messages(topics=['/gazebo/model_states']):
-#
-#    if topic == '/gazebo/model_states':
+for topic, msg, t in bag.read_messages(topics=['/gazebo/model_states']):
+
+   if topic == '/gazebo/model_states':
        # print("odom: ", odom_cnt)
-       # print('---------------------------------------------')
-       # print(msg.pose)
-       # xs.append(msg.pose[2].position.x)
-       # ys.append(msg.pose[2].position.y)
-       # zs.append(msg.pose[2].position.z)
+       print('---------------------------------------------')
+       print(msg.pose[9])
+       # print(msg.pose[2].position.x)
+       xs.append(msg.pose[9].position.x)
+       ys.append(msg.pose[9].position.y)
+       zs.append(msg.pose[9].position.z)
        # odom_cnt += 1
-for topic, msg, t in bag.read_messages(topics=['/tello/odom', '/tello/camera/image_raw']):
-    cnt += 1
-    if topic == '/tello/odom' and cnt >= startIdx and cnt <= endIdx:
-       xs.append(np.float32(msg.pose.pose.position.x))
-       ys.append(np.float32(-msg.pose.pose.position.y))
-       zs.append(np.float32(msg.pose.pose.position.z))
-       if startTime == 0:
-           startTime = msg.header.stamp.to_sec()
-       print(msg.header.stamp.to_sec()-startTime)
-       ts.append(msg.header.stamp.to_sec()-startTime)
+# for topic, msg, t in bag.read_messages(topics=['/tello/odom', '/tello/camera/image_raw']):
+#     cnt += 1
+#     if topic == '/tello/odom' and cnt >= startIdx and cnt <= endIdx:
+#        xs.append(np.float32(msg.pose.pose.position.x))
+#        ys.append(np.float32(-msg.pose.pose.position.y))
+#        zs.append(np.float32(msg.pose.pose.position.z))
+#        if startTime == 0:
+#            startTime = msg.header.stamp.to_sec()
+#        print(msg.header.stamp.to_sec()-startTime)
+#        ts.append(msg.header.stamp.to_sec()-startTime)
 
 
    # if topic == '/tello/camera/image_raw':
@@ -92,19 +93,17 @@ print(np.array([xs[0], ys[0], zs[0]]))
 print(zeroDist)
 
 
+# print(ys[200])
 # Xs = np.array(xs) + zeroDist[0]
-Xs = -np.array(ys) + zeroDist[0]-10
-# Ys = np.array(ys) + zeroDist[1]
-Ys = -np.array(xs) + zeroDist[1]-20
+# Xs = -np.array(ys) + zeroDist[0]
+# # Ys = np.array(ys) + zeroDist[1]
+# Ys = np.array(xs) + zeroDist[1]
 # Zs = np.array(zs) + zeroDist[2]
-Zs = np.ones(len(xs)) * 4
 
-theta = -15*(np.pi/180)
-Xs = np.array(Xs-22)*np.cos(theta) + np.array(Ys-31)*np.sin(theta) +27
-Ys = np.array(Ys-31)*np.cos(theta) - np.array(Xs-22)*np.sin(theta)+31
+Xs = np.array(ys)
+Ys = np.array(xs)
+Zs = np.array(zs)
 
-print(Zs[0])
-#
 xName = 'bagfile_'+bagName+'_x'
 yName = 'bagfile_'+bagName+'_y'
 zName = 'bagfile_'+bagName+'_z'
@@ -114,7 +113,7 @@ zName = 'bagfile_'+bagName+'_z'
 dict = {xName: Xs, yName: Ys, zName: Zs}
 #
 df = pd.DataFrame(dict)
-#
+
 # # saving the dataframe
 fileName = 'position_'+bagName+'.csv'
 
