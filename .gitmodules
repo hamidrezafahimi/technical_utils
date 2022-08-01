@@ -1,0 +1,5 @@
+[submodule "ROS/ROS2/dev_ws/src/ros_tutorials"]
+	path = ROS/ROS2/dev_ws/src/ros_tutorials
+	url = https://github.com/ros/ros_tutorials.git
+	branch = foxy-devel
+	ignore=dirty
