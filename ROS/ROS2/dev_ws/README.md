@@ -1,7 +1,7 @@
 
 # A Practice of Creating Workspace, Package, Nodes, etc.
 
-This is the tutorial is based on what is given in the ROS2 documentaion. 
+This tutorial is based on what is given in the ROS2 documentaion. Actually, my completed homeworks!
 
 - [Creating Workspaces](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html)
 
