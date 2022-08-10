@@ -14,7 +14,7 @@ from webots_ros2_driver.webots_launcher import WebotsLauncher
 def generate_launch_description():
     package_dir = get_package_share_directory('my_mavic')
     world = LaunchConfiguration('world')
-    robot_description = pathlib.Path(os.path.join(package_dir, 'resource', 'mavic_webots.urdf')).read_text()
+    robot_description = pathlib.Path(os.path.join(package_dir, 'resource', 'my_mavic_webots.urdf')).read_text()
 
     webots = WebotsLauncher(
         world=PathJoinSubstitution([package_dir, 'worlds', world])
@@ -32,7 +32,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
-            default_value='mavic_world.wbt',
+            default_value='my_mavic_world.wbt',
             description='Choose one of the world files from `/my_mavic/worlds` directory'
         ),
         webots,
