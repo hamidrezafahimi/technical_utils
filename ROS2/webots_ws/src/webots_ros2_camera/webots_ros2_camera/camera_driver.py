@@ -5,7 +5,6 @@ class CameraDriver:
     def init(self, webots_node, properties):
 
         self.__robot = webots_node.robot
-        self.__target_twist = Twist()
         rclpy.init(args=None)
         self.__node = rclpy.create_node('camera_driver')
 

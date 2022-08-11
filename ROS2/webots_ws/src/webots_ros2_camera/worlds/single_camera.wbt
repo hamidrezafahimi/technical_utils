@@ -35,7 +35,6 @@ Robot {
             name "cam_1"
           }
         ]
-        name "lense"
       }
     }
     Transform {
