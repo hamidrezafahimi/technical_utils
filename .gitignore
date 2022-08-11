@@ -7,3 +7,5 @@ webots/*/controllers
 webots/*/libraries
 webots/*/plugins
 webots/*/protos
+webots/camera_in_webots/
+webots/webots_camera/
