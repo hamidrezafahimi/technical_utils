@@ -1,8 +1,8 @@
-ROS/ROS2/*/build/
-ROS/ROS2/*/install/
-ROS/ROS2/*/log/
-ROS/ROS1/*/build/
-ROS/ROS1/*/devel/
+ROS2/*/build/
+ROS2/*/install/
+ROS2/*/log/
+ROS1/*/build/
+ROS1/*/devel/
 webots/*/controllers
 webots/*/libraries
 webots/*/plugins
