@@ -13,10 +13,12 @@ TexturedBackgroundLight {
 CircleArena {
 }
 Robot {
+  translation 0 0 0
+  rotation 0 0 1 -2.356194487
   children [
     HingeJoint {
       endPoint Solid {
-        translation 0.045 0 0.0415
+        translation 0.045 0 0
         rotation 0 1 0 1.5708
         children [
           Shape {
@@ -38,7 +40,7 @@ Robot {
       }
     }
     Transform {
-      translation 0 0 0.0415
+      translation 0 0 0
       children [
         Shape {
           appearance PBRAppearance {
@@ -49,16 +51,13 @@ Robot {
               }
         }
       ]
-    }
-    
+    } 
   ]
   boundingObject Transform {
-    translation 0 0 0.0415
+    translation 0 0 0
     children [
       USE BODY
     ]
-  }
-  physics Physics {
   }
   controller "<extern>"
   name "camera_1"
