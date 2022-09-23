@@ -13,4 +13,7 @@ webots/webots_camera/
 *.cmake
 *.out
 CMakeCache.*
-cpp/simple/cmake/CMakeFiles/
+*/CMakeFiles/
+*/*/CMakeFiles/
+*/*/*/CMakeFiles/
+*/*/*/*/CMakeFiles/
