@@ -6,25 +6,27 @@ This is the result of my *don't-throw-little-stuff-away* routine! A set of go-to
 
 * Sometimes I find it necessary to create simple programs (e.g. reading or writing some special filetypes, plotting specia shapes, dealing with special libraries, etc.) which are pretty simple while taking time to do them again. So, I can store them all in my little *Technical Utils* box. Maybe they work for other people, Why not.
 
+*NOTE:* To get the most out of what is presented here, remember to check my [instruction set](https://github.com/hamidrezafahimi/instructor_archive) if needed. There, lie all of the steps taken to install, compile, or run the softwares that their modifications are given here.
+
 ## Some Important Featurs
 
 Here is a list of the most important modules and utilities provided in this repo:
 
 * Simple codes to extract and plot data out of ROS1 bagfiles: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS1/process_bagfiles). ([description](#plotting)) 
 
-* A drone flight simulation, using the *IMAV2017* virtual challenge platform, based on Gazebo-7 and ROS1: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS1/adrone) ([description](###adrone))
+* A drone flight simulation, using the *IMAV2017* virtual challenge platform, based on Gazebo-7 and ROS1: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS1/adrone) ([description](#adrone))
 
-* A stand-alone drone flight simulation for ROS2 and based on *webots 2022a*: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS2/webots_ws/src/my_mavic) ([description](####src/my_mavic))
+* A stand-alone drone flight simulation for ROS2 and based on *webots 2022a*: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS2/webots_ws/src/my_mavic) ([description](#src/my_mavic))
 
-* Simulation of a stand-alone single camera in webots - May seem easy but I didn't find such thing!:[Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS2/webots_ws/src/webots_ros2_camera) ([description](####src/webots_ros2_camera))
+* Simulation of a stand-alone single camera in webots - May seem easy but I didn't find such thing!:[Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS2/webots_ws/src/webots_ros2_camera) ([description](#src/webots_ros2_camera))
 
 ## Tutorials and Samples
 
-* Elementary samples fo gazebo simulation based on ROS1: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS1/gi5m) ([description](###gi5m))
+* Elementary samples fo gazebo simulation based on ROS1: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/ROS1/gi5m) ([description](#gi5m))
 
-* How to simply create a Makefile to compile cpp codes: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/cpp/class/makefile) ([description]())
+* How to simply create a Makefile to compile cpp codes: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/cpp/class/makefile) ([description](#CPP))
 
-* How to create a simple `CMakeLists.txt` file in order to compile and run cpp codes: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/cpp/simple/cmake) ([description]())
+* How to create a simple `CMakeLists.txt` file in order to compile and run cpp codes: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/cpp/simple/cmake) ([description](#CPP))
 
 # Working Tree Explained
 
