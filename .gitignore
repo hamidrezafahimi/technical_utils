@@ -9,3 +9,8 @@ webots/*/plugins
 webots/*/protos
 webots/camera_in_webots/
 webots/webots_camera/
+*.o
+*.cmake
+*.out
+CMakeCache.*
+cpp/simple/cmake/CMakeFiles/

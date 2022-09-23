@@ -29,7 +29,7 @@ Here is a list of the most important modules and utilities provided in this repo
 
 The directory includes some useful programs for drawing plots in python's *matplotlib* platform.
 
-## ROS/ROS1
+## ROS1
 
 ### adrone
 
@@ -44,7 +44,7 @@ This is how I simply learned Gazebo: My 2019 homeworks following the instruction
 Contains a bunch of python scripts which handle the extraction and plotting of data saved in ROS1 bagfiles.
 
 
-## ROS/ROS2
+## ROS2
 
 Each folder is a ROS2 workspace.
 
@@ -81,3 +81,6 @@ This guy is so useful. It's a native simulation of Mavic 2 Pro, totally stand-al
 The webots worlds that I've created so far.
 
 
+## CPP
+
+Samples to run cpp codes with different paradigms (gcc, makefile, cmake). Also including simplifications on C++ features, pointers on how to set-up a filesystem for C++ project, and so on. Each of the basic contents shape a sub-directory. Within, different folders contain different compilation paradagms - if exist! - around the same context.
