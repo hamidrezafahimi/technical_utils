@@ -28,6 +28,8 @@ Here is a list of the most important modules and utilities provided in this repo
 
 * How to create a simple `CMakeLists.txt` file in order to compile and run cpp codes: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/cpp/simple/cmake) ([description](#CPP))
 
+* How to create a `CMakeLists.txt` file for an object oriented cpp project with standard filesystem: [Link](https://github.com/hamidrezafahimi/technical_utils/tree/main/cpp/simple/cmake) ([description](#CPP))
+
 # Working Tree Explained
 
 All the folders contain non-related programs and are just classified based on their context. The following working tree shows what's going on here.

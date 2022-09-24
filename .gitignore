@@ -1,3 +1,6 @@
+*
+!*.*
+!*/
 ROS2/*/build/
 ROS2/*/install/
 ROS2/*/log/
@@ -17,3 +20,4 @@ CMakeCache.*
 */*/CMakeFiles/
 */*/*/CMakeFiles/
 */*/*/*/CMakeFiles/
+*/*/*/*/*/CMakeFiles/
