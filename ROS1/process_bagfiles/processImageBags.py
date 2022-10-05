@@ -1,9 +1,8 @@
-#!/usr/bin/env python
 
 import rospy
 
-import sys
-sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
+# import sys
+# sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
 
 import cv2 as cv
 from sensor_msgs.msg import Image

@@ -1,6 +1,6 @@
-clc;
-clear all;
-close all;
+clc
+clear all
+close all
 
 files = ['position_2020-11-21-15-35-25.csv'; 'position_2020-11-21-18-32-28.csv';
          'position_2020-11-21-18-56-02.csv'; 'position_2020-11-21-19-13-39.csv';
