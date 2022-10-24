@@ -1,5 +1,6 @@
 
 import rospy
+import rosbag
 
 # import sys
 # sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
@@ -8,7 +9,6 @@ import cv2 as cv
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import argparse
-import rosbag
 import os
 import glob
 import pandas as pd
@@ -210,14 +210,20 @@ class ProcessImageBags:
                 cv.imshow("subscribed video", image)
 
                 filename1 = newAddress + "/img_%d.jpg"%it
-                cv.imwrite(filename1, image)
                 its.append(it)
                 if flag:
                     perms.append(1)
                 else:
                     perms.append(0)
                 end = msg.header.stamp.to_sec()
-                ts.append(end-start)
+                relativeTime = end-start
+                ts.append(relativeTime)
+                txt = str(relativeTime)
+                print(txt)
+                image = cv.putText(image, txt, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 
+                                1, (255, 0, 0), 2, cv.LINE_AA)
+
+                cv.imwrite(filename1, image)
                 self._key = cv.waitKey(1)
                 if self._key == ord('q'):
                     break
